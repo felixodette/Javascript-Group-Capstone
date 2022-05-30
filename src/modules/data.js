@@ -10,10 +10,16 @@ export default class Movie {
       const title = data.results[i].title;
       const description = data.results[i].overview;
       const id = data.results[i].id;
+      const poster = `https://www.themoviedb.org/t/p/w600_and_h900_bestv2${data.results[i].poster_path}`;
+      // const popularity = data.result[i].popularity;
+      const releaseDate = data.results[i].release_date;
       this.arrMovies.push({
         title,
         description,
         id,
+        poster,
+        // popularity,
+        releaseDate,
       });
     };
   };
