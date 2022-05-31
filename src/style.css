@@ -72,3 +72,15 @@ p {
 #reservations {
   cursor: pointer;
 }
+
+.top-rated-movie-poster-modal {
+  display: flex;
+  width: 50%;
+  align-items: center;
+}
+
+.img-div {
+  display: inline-flex;
+  align-content: center;
+  justify-content: center;
+}
