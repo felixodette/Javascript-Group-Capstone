@@ -7,7 +7,31 @@
 
 @font-face {
   font-family: cocogoose;
-  src: url(/src/assets/fonts/Cocogoose\ Pro\ Block\ Gradient\ Trial.ttf);
+  src: url(/src/assets/fonts/Cocogoose\ Pro\ Letterpress\ Trial.ttf);
+}
+
+.dark-background {
+  background-color: #374151;
+}
+
+.dark-color {
+  color: #374151;
+}
+
+.light-background {
+  background-color: #eee;
+}
+
+.darker-background {
+  background-color: #1f2937
+}
+
+.darker-color {
+  color: #1f2937
+}
+
+.light-color {
+  color: #eee;
 }
 
 h1 {
@@ -16,4 +40,18 @@ h1 {
 
 p {
   font-family: sans-serif;
+}
+
+.top-rated-movie {
+  border: 1px solid #1f2937;
+  border-radius: 5%;
+}
+
+.top-rated-movie:hover {
+  background-color: #111827;
+  cursor: pointer;
+}
+
+.top-rated-movie-poster {
+  width: 90%;
 }
