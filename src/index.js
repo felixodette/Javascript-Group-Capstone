@@ -1,13 +1,12 @@
 import Movie from './modules/data.js';
 import './style.css';
 
-const moviesObject = new Movie;
+const moviesObject = new Movie();
 
 const addDataToArrMovies = async () => {
-  const arrTopMovies = await moviesObject.getData()
-  console.log(arrTopMovies);
+  const arrTopMovies = await moviesObject.getData();
   return arrTopMovies;
-}
+};
 
 const displayTopRatedMovies = async () => {
   const topRatedMovies = await addDataToArrMovies();

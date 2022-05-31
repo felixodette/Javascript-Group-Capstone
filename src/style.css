@@ -23,11 +23,11 @@
 }
 
 .darker-background {
-  background-color: #1f2937
+  background-color: #1f2937;
 }
 
 .darker-color {
-  color: #1f2937
+  color: #1f2937;
 }
 
 .light-color {
@@ -61,3 +61,10 @@ p {
   bottom: 0;
 }
 
+.footer {
+  background-color: #f1f1f1;
+}
+
+.footer-div {
+  background-color: rgba(0, 0, 0, 0.2);
+}
