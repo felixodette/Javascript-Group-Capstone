@@ -30,6 +30,20 @@ const displayTopRatedMovies = async () => {
           <div class="modal-body">
             <div class="img-div"><img class="top-rated-movie-poster-modal" src="${movie.poster}" alt=""></div>
             <article class="text-center">Release Date: ${movie.releaseDate} ID: ${movie.id}</article>
+            <div class="form-section text-dark">
+              <form class="form-floating">
+                <input type="text" class="form-control" id="floatingInputInvalid" placeholder="name@example.com" value="" data-name>
+                <label for="floatingInputInvalid">Name</label>
+              </form>
+              <form class="form-floating">
+                <input type="text" class="form-control" placeholder="name@example.com" value="" data-start>
+                <label for="floatingInputInvalid">Start</label>
+              </form>
+              <form class="form-floating">
+                <input type="text" class="form-control" placeholder="name@example.com" value="" data-end>
+                <label for="floatingInputInvalid">End</label>
+              </form>
+            </div>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
