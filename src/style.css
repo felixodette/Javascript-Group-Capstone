@@ -55,3 +55,9 @@ p {
 .top-rated-movie-poster {
   width: 90%;
 }
+
+.like-comment {
+  width: 40%;
+  bottom: 0;
+}
+
