@@ -33,6 +33,13 @@ topRatedMoviesPart.addEventListener('click', async (e) => {
   };
 });
 
+const displeyLikes = async () => {
+  // const arrMoviesLikes = await moviesObject.getMoviesLike();
+  const showMoviesPart = document.querySelectorAll('.show-likes-part');
+  // const showMoviesPartId = showMoviesPart.id.value;
+  console.log(showMoviesPart);
+}
+
 window.addEventListener('DOMContentLoaded', async () => {
   await displayTopRatedMovies();
 });
