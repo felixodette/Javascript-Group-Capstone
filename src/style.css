@@ -84,3 +84,10 @@ p {
   align-content: center;
   justify-content: center;
 }
+
+.modal-body,
+.modal-header,
+.modal-footer {
+  background-color: #111827;
+  color: white;
+}
