@@ -1,40 +1,44 @@
 const url = 'https://api.themoviedb.org/3/movie/top_rated?api_key=c7aa7fee798829f3624f83b8919fe2b9&language=en-US&page=1';
-const apiUrlForLikes = "https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/X3LACiofRMQXf8LGL8qW/likes/"
+const apiUrlForLikes = "https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/X3LACiofRMQXf8LGL8qW/likes/";
 
 export default class Movie {
   constructor(arrMovies) {
     this.arrMovies = arrMovies || [];
   }
 
-  addMoviesData = (data) => {
+  filterMovies = (data, likesObject) => {
+    const result = [];
     for (let i = 0; i < data.results.length; i += 1) {
       const { title } = data.results[i];
       const description = data.results[i].overview;
       const { id } = data.results[i];
       const poster = `https://www.themoviedb.org/t/p/w600_and_h900_bestv2${data.results[i].poster_path}`;
-      // const popularity = data.result[i].popularity;
       const releaseDate = data.results[i].release_date;
-      this.arrMovies.push({
+      const like = likesObject[id] || 0;
+      result.push({
         title,
         description,
         id,
         poster,
-        // popularity,
         releaseDate,
+        like,
       });
     }
+    return result;
   };
 
   getData = async () => {
     const response = await fetch(url, {
       method: 'GET',
     });
-    const data = await response.json();
-    this.addMoviesData(data);
+    const movies = await response.json();
+    const likesObject = await this.getMoviesLike();
+    this.arrMovies = this.filterMovies(movies, likesObject);
+    console.log(this.arrMovies);
     return this.arrMovies;
   };
 
-  addLikesToMovies = async (movieId) => {
+  addLikeToMovie = async (movieId) => {
     const likesObj = {
       item_id: movieId,
     };
@@ -45,18 +49,48 @@ export default class Movie {
         'Content-Type': 'application/json',
       },
     });
-    const responseResult = response.status;
-    if (responseResult === 201) {
-      return true;
-    };
+    if (response.status !== 201) {
+      throw response;
+    }
   };
 
   getMoviesLike = async () => {
     const response = await fetch(apiUrlForLikes, {
       method: 'GET',
     });
-    const movieLikes = await response.json();
-    console.log(movieLikes);
-    return movieLikes;
+    const moviesLikes = await response.json();
+    let likesObject = {};
+    moviesLikes.forEach((like) => {
+      likesObject[like.item_id] = like.likes;
+    })
+    return likesObject;
+  };
+
+  getMovie = async (movieId) => {
+    const movie = await this.arrMovies.filter((arrMovie) => arrMovie.id == movieId);
+    console.log(movie);
+    return movie;
   }
-}
+};
+
+// [{
+//   item:
+//   like:
+// }]
+// newObject = {}
+// likes.forech(like) => {
+//   newObject[like.item] = like.like;
+// }
+// // newObject ={
+// //   item_id_1: like,
+// //   item_id_2: like,
+// // }
+// arrMovies => movie.like = newObject[movie.id]
+// // newObject[item_id]
+// [{
+//   like:
+// },{
+//   like
+// },{
+//   like
+// }]
