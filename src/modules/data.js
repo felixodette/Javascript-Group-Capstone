@@ -34,7 +34,6 @@ export default class Movie {
     const movies = await response.json();
     const likesObject = await this.getMoviesLike();
     this.arrMovies = this.filterMovies(movies, likesObject);
-    console.log(this.arrMovies);
     return this.arrMovies;
   };
 
@@ -72,25 +71,3 @@ export default class Movie {
     return movie;
   }
 };
-
-// [{
-//   item:
-//   like:
-// }]
-// newObject = {}
-// likes.forech(like) => {
-//   newObject[like.item] = like.like;
-// }
-// // newObject ={
-// //   item_id_1: like,
-// //   item_id_2: like,
-// // }
-// arrMovies => movie.like = newObject[movie.id]
-// // newObject[item_id]
-// [{
-//   like:
-// },{
-//   like
-// },{
-//   like
-// }]
