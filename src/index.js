@@ -1,5 +1,6 @@
 import Movie from './modules/data.js';
 import './style.css';
+import { calculateIteme } from './modules/counters/moviesCounter.js';
 
 const moviesObject = new Movie();
 
@@ -26,8 +27,17 @@ const displayTopRatedMovies = async () => {
   });
 };
 
+
+const countMovies = async () => {
+  const arrMovies = await addDataToArrMovies();
+  const result = calculateIteme(arrMovies);
+  const counter = document.getElementById('counterForMovies');
+  counter.innerHTML = `${result} Movies`;
+};
+
 window.addEventListener('DOMContentLoaded', async () => {
   await displayTopRatedMovies();
+  await countMovies();
 
   topRatedMoviesPart.addEventListener('click', async (e) => {
     const eventId = e.target.id;
