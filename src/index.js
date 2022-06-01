@@ -67,10 +67,10 @@ window.addEventListener('DOMContentLoaded', async () => {
       });
     }
 
-    if (eventId.includes('comment')) {
+    /* if (eventId.includes('comment')) {
       const movieId = eventId.replace('comment', '');
       console.log(movieId);
-    }
+    } */
   });
 });
 
