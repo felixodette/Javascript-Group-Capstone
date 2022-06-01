@@ -18,28 +18,23 @@ const displayTopRatedMovies = async () => {
     <h2 class="top-rated-movie-title light-color h5 text-center p-3 w-100">${movie.title}</h2>
     <p class="top-rated-movie-release-date light-color h6">${movie.releaseDate}</p>
     <div class="like-comment d-flex justify-content-between"><i class="fa-regular fa-heart light-color" id="like${movie.id}"></i><i class="fa-regular fa-comment light-color" id="comment${movie.id}"></i><i class="fa-regular fa-calendar light-color" id="reservation${movie.id}"></i></div>
-    <p class="text-danger h2 show-likes-part" id="showLikes${movie.id}"></p>
+    <p class="text-danger h2 show-likes-part" id="showLikes${movie.id}">${movie.like}</p>
     </div>`;
     topRatedMoviesPart.insertAdjacentHTML('beforeend', movieInfo);
   });
 };
 
-topRatedMoviesPart.addEventListener('click', async (e) => {
-  const eventId = e.target.id;
-  if (eventId.includes('like')) {
-    const movieId = eventId.replace('like', '');
-    await moviesObject.addLikesToMovies(movieId);
-    await displeyLikes();
-  };
-});
-
-const displeyLikes = async () => {
-  // const arrMoviesLikes = await moviesObject.getMoviesLike();
-  const showMoviesPart = document.querySelectorAll('.show-likes-part');
-  // const showMoviesPartId = showMoviesPart.id.value;
-  console.log(showMoviesPart);
-}
-
 window.addEventListener('DOMContentLoaded', async () => {
   await displayTopRatedMovies();
+
+  topRatedMoviesPart.addEventListener('click', async (e) => {
+    const eventId = e.target.id;
+    if (eventId.includes('like')) {
+      const movieId = eventId.replace('like', '');
+      const likesPart = document.getElementById(`showLikes${movieId}`);
+      moviesObject.addLikeToMovie(movieId).then(() => {
+        likesPart.innerHTML = parseInt(likesPart.innerHTML) + 1;
+      });
+    };
+  });
 });
