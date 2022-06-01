@@ -42,6 +42,11 @@ p {
   font-family: sans-serif;
 }
 
+header p {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 900;
+}
+
 .top-rated-movie {
   border: 1px solid #1f2937;
   border-radius: 5%;

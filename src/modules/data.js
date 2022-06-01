@@ -68,5 +68,5 @@ export default class Movie {
   getMovie = async (movieId) => {
     const movie = await this.arrMovies.filter((arrMovie) => arrMovie.id === parseInt(movieId, 10));
     return movie;
-  }
-}
+  };
+};
