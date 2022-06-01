@@ -27,7 +27,6 @@ const displayTopRatedMovies = async () => {
   });
 };
 
-
 const countMovies = async () => {
   const arrMovies = await addDataToArrMovies();
   const result = calculateIteme(arrMovies);
