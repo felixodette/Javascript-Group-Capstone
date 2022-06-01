@@ -1,5 +1,5 @@
 const url = 'https://api.themoviedb.org/3/movie/top_rated?api_key=c7aa7fee798829f3624f83b8919fe2b9&language=en-US&page=1';
-const apiUrlForLikes = "https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/X3LACiofRMQXf8LGL8qW/likes/";
+const apiUrlForLikes = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/X3LACiofRMQXf8LGL8qW/likes/';
 
 export default class Movie {
   constructor(arrMovies) {
@@ -58,16 +58,15 @@ export default class Movie {
       method: 'GET',
     });
     const moviesLikes = await response.json();
-    let likesObject = {};
+    const likesObject = {};
     moviesLikes.forEach((like) => {
       likesObject[like.item_id] = like.likes;
-    })
+    });
     return likesObject;
   };
 
   getMovie = async (movieId) => {
-    const movie = await this.arrMovies.filter((arrMovie) => arrMovie.id == movieId);
-    console.log(movie);
+    const movie = await this.arrMovies.filter((arrMovie) => arrMovie.id === parseInt(movieId, 10));
     return movie;
   }
-};
+}

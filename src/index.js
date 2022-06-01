@@ -35,8 +35,8 @@ window.addEventListener('DOMContentLoaded', async () => {
       const movieId = eventId.replace('like', '');
       const likesPart = document.getElementById(`showLikes${movieId}`);
       moviesObject.addLikeToMovie(movieId).then(() => {
-        likesPart.innerHTML = parseInt(likesPart.innerHTML) + 1;
+        likesPart.innerHTML = parseInt(likesPart.innerHTML, 10) + 1;
       });
-    };
+    }
   });
 });
