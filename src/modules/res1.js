@@ -8,7 +8,7 @@ const postURL = `${INVOLVEMENT}/${APP_ID}/${RESERVATION_ENDPOINT}/`;
 const getReservations = async (id) => {
   commentsHeader.innerHTML = 'Comments (0)';
   spinner.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
-  await fetch(`${postURL}${appID}/comments?item_id=${id}`)
+  await fetch(`${INVOLVEMENT}/${APP_ID}/${RESERVATION_ENDPOINT}?item_id=${id}`)
     .then((reponse) => reponse.json())
     .then((json) => {
       spinner.innerHTML = '';
