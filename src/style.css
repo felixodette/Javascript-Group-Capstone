@@ -42,6 +42,11 @@ p {
   font-family: sans-serif;
 }
 
+header p {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 900;
+}
+
 .top-rated-movie {
   border: 1px solid #1f2937;
   border-radius: 5%;
@@ -56,9 +61,22 @@ p {
   width: 90%;
 }
 
+.top-rated-movie-poster:hover {
+  border: darkred 3px solid;
+}
+
 .like-comment {
-  width: 40%;
+  width: 50%;
   bottom: 0;
+}
+
+i:hover {
+  color: cornflowerblue;
+  font-size: 1.4rem;
+}
+
+.show-likes-part:hover {
+  color: rgb(121, 178, 228);
 }
 
 .footer {
