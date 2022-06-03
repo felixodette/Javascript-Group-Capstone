@@ -1,3 +1,3 @@
 const calculateComments = (arrMovieComments) => arrMovieComments.length;
 
-export { calculateComments };
+export default { calculateComments };
