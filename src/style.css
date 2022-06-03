@@ -87,25 +87,15 @@ i:hover {
   background-color: rgba(0, 0, 0, 0.2);
 }
 
-#reservations {
-  cursor: pointer;
+.comments-div {
+  border: #111827 2px solid;
+  border-radius: 5%;
 }
 
-.top-rated-movie-poster-modal {
-  display: flex;
-  width: 50%;
-  align-items: center;
-}
-
-.img-div {
-  display: inline-flex;
-  align-content: center;
-  justify-content: center;
-}
-
-.modal-body,
-.modal-header,
-.modal-footer {
-  background-color: #111827;
-  color: white;
+.user-comment-detail {
+  background-color: #1f2937;
+  border: #eee 3px solid;
+  border-radius: 10%;
+  color: #eee;
+  width: 100%;
 }
