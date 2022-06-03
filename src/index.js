@@ -71,23 +71,33 @@ window.addEventListener('DOMContentLoaded', async () => {
       popupOpen = true;
     } else if (eventId.includes('comment')) {
       movieId = eventId.replace('comment', '');
-      // moviesObject.getMoviesComments(movieId);
       popupOpen = true;
     }
 
     if (popupOpen) {
       const movieObj = await moviesObject.getMovie(movieId);
+      const arrMovieComments = await moviesObject.getMoviesComments(movieId);
       const popUpMovieImage = document.getElementById('popUpPoster');
       const popUpMovieId = document.getElementById('popUpMovieId');
       const popUpMovieTitle = document.getElementById('popUpMovieTitle');
       const popUpMovieDescription = document.getElementById('popUpMovieDescription');
+      const popUpMovieComments = document.getElementById('popUpMovieComments');
+      popUpMovieComments.innerHTML = '';
       popUpMovieId.innerHTML = movieObj.id;
       popUpMovieImage.innerHTML = `<img class="w-100" src="${movieObj.poster}" alt="movie-poster">`;
       popUpMovieTitle.innerHTML = movieObj.title;
       popUpMovieDescription.innerHTML = movieObj.description;
+      arrMovieComments.forEach((comment) => {
+        const movieComments = `
+          <div class="user-comment-detail p-3">
+          <h3 class="m-0 h5">User Name: ${comment.username}</h3>
+          <p class="m-0">User review: ${comment.comment}</p>
+          <p class="m-0">Creation date: ${comment.creation_date}
+        </div>`;
+        popUpMovieComments.insertAdjacentHTML('beforeend', movieComments);
+      });
     }
   });
-
   const commentForm = document.getElementById('commentForm');
   commentForm.addEventListener('submit', async (e) => {
     e.preventDefault();

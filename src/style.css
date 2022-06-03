@@ -86,3 +86,16 @@ i:hover {
 .footer-div {
   background-color: rgba(0, 0, 0, 0.2);
 }
+
+.comments-div {
+  border: #111827 2px solid;
+  border-radius: 5%;
+}
+
+.user-comment-detail {
+  background-color: #1f2937;
+  border: #eee 3px solid;
+  border-radius: 10%;
+  color: #eee;
+  width: 100%;
+}
