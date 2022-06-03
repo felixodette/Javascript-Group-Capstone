@@ -18,8 +18,7 @@ const addPopUpToMoviesDiv = () => {
             </div>
           </div>
           <a class="btn mt-3 mb-3" data-toggle="collapse" href="#popUpMovieComments" role="button" aria-expanded="false"
-            aria-controls="popUpMovieComments">
-            Comments
+            aria-controls="popUpMovieComments" id="commentsCount">
           </a>
           <div class="collapse d-flex flex-column align-self-start w-100 p-3 comments-div" id="popUpMovieComments">
           </div>
