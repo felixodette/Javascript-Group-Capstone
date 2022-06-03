@@ -18,6 +18,12 @@ const addPopUpToMoviesDiv = () => {
             </div>
           </div>
         </div>
+        <a class="btn mt-3 mb-3" data-toggle="collapse" href="#popUpMovieComments" role="button" aria-expanded="false"
+            aria-controls="popUpMovieComments">
+            Comments
+          </a>
+          <div class="collapse d-flex flex-column align-self-start w-100 p-3 comments-div" id="popUpMovieComments">
+          </div>
         <form id="commentForm" class="p-4">
           <div class="form-group">
             <label for="user-name" class="col-form-label">Enter your name:</label>

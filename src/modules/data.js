@@ -83,4 +83,12 @@ export default class Movie {
     const movie = await this.arrMovies.filter((arrMovie) => arrMovie.id === parseInt(movieId, 10));
     return movie[0];
   };
+
+  getMoviesComments = async (movieId) => {
+    const response = await fetch(`${apiUrlForComments}?item_id=${movieId}`, {
+      method: 'GET',
+    });
+    const moviesComments = await response.json();
+    return moviesComments;
+  };
 }

@@ -81,16 +81,28 @@ window.addEventListener('DOMContentLoaded', async () => {
       const popUpMovieId = document.getElementById('popUpMovieId');
       const popUpMovieTitle = document.getElementById('popUpMovieTitle');
       const popUpMovieDescription = document.getElementById('popUpMovieDescription');
+      const arrMovieComments = await moviesObject.getMoviesComments(movieId);
       popUpMovieId.innerHTML = movieObj.id;
       popUpMovieImage.innerHTML = `<img class="w-100" src="${movieObj.poster}" alt="movie-poster">`;
       popUpMovieTitle.innerHTML = movieObj.title;
       popUpMovieDescription.innerHTML = movieObj.description;
     }
+    const popUpMovieComments = document.getElementById('popUpMovieComments');
+    popUpMovieComments.innerHTML = '';
   });
 
   const commentForm = document.getElementById('commentForm');
   commentForm.addEventListener('submit', async (e) => {
     e.preventDefault();
+    arrMovieComments.forEach((comment) => {
+      const movieComments =
+      `<div class="user-comment-detail p-3">
+        <h3 class="m-0 h5">User Name: ${comment.username}</h3>
+        <p class="m-0">User review: ${comment.comment}</p>
+        <p class="m-0">Creation date: ${comment.creation_date}
+      </div>`;
+      popUpMovieComments.insertAdjacentHTML('beforeend', movieComments);
+    });
     const userName = document.getElementById('user-name');
     const userComment = document.getElementById('user-comment');
     const movieIdPart = document.getElementById('popUpMovieId');
