@@ -2,6 +2,7 @@ import Movie from './modules/data.js';
 import './style.css';
 import { calculateIteme } from './modules/counters/moviesCounter.js';
 import { addPopUpToMoviesDiv } from './modules/popUp.js';
+import { calculateComments } from './modules/counters/comments-counter.js';
 
 const moviesObject = new Movie();
 
@@ -77,11 +78,15 @@ window.addEventListener('DOMContentLoaded', async () => {
     if (popupOpen) {
       const movieObj = await moviesObject.getMovie(movieId);
       const arrMovieComments = await moviesObject.getMoviesComments(movieId);
+      const movieCommentsCount = calculateComments(arrMovieComments);
       const popUpMovieImage = document.getElementById('popUpPoster');
       const popUpMovieId = document.getElementById('popUpMovieId');
       const popUpMovieTitle = document.getElementById('popUpMovieTitle');
       const popUpMovieDescription = document.getElementById('popUpMovieDescription');
       const popUpMovieComments = document.getElementById('popUpMovieComments');
+      const commentsCounter = document.getElementById('commentsCount');
+      commentsCounter.innerHTML = '';
+      commentsCounter.innerHTML = `${movieCommentsCount} Comments`;
       popUpMovieComments.innerHTML = '';
       popUpMovieId.innerHTML = movieObj.id;
       popUpMovieImage.innerHTML = `<img class="w-100" src="${movieObj.poster}" alt="movie-poster">`;
