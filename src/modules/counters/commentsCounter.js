@@ -1,5 +1,3 @@
-const calculateComments = (arrMovieComments) => {
-  return arrMovieComments.length;
-};
+const calculateComments = (arrMovieComments) => arrMovieComments.length;
 
 export { calculateComments };
