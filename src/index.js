@@ -87,4 +87,20 @@ window.addEventListener('DOMContentLoaded', async () => {
       popUpMovieDescription.innerHTML = movieObj.description;
     }
   });
+
+  const commentForm = document.getElementById('commentForm');
+  commentForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const userName = document.getElementById('user-name');
+    const userComment = document.getElementById('user-comment');
+    const movieIdPart = document.getElementById('popUpMovieId');
+    const movieIdString = movieIdPart.innerText;
+    const movieId = parseInt(movieIdString, 10);
+    const commentObject = {
+      item_id: movieId,
+      username: userName.value,
+      comment: userComment.value,
+    };
+    await moviesObject.addCommentToMovie(commentObject);
+  });
 });

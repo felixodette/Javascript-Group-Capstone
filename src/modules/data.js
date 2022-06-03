@@ -1,5 +1,6 @@
 const url = 'https://api.themoviedb.org/3/movie/top_rated?api_key=c7aa7fee798829f3624f83b8919fe2b9&language=en-US&page=1';
 const apiUrlForLikes = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/X3LACiofRMQXf8LGL8qW/likes/';
+const apiUrlForComments = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/X3LACiofRMQXf8LGL8qW/comments/';
 
 export default class Movie {
   constructor(arrMovies) {
@@ -63,6 +64,19 @@ export default class Movie {
       likesObject[like.item_id] = like.likes;
     });
     return likesObject;
+  };
+
+  addCommentToMovie = async (commentObject) => {
+    const response = await fetch(apiUrlForComments, {
+      method: 'POST',
+      body: JSON.stringify(commentObject),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+    if (response.status !== 201) {
+      throw response;
+    }
   };
 
   getMovie = async (movieId) => {
