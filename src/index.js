@@ -7,10 +7,7 @@ import { calculateReservations } from './modules/counters/reservationsCounter.js
 
 const moviesObject = new Movie();
 
-const addDataToArrMovies = async () => {
-  return await moviesObject.getData();
-};
-
+const addDataToArrMovies = async () => await moviesObject.getData();
 const topRatedMoviesPart = document.getElementById('topRatedMovies');
 
 const displayTopRatedMovies = async () => {
