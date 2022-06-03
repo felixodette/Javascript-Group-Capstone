@@ -87,6 +87,7 @@ window.addEventListener('DOMContentLoaded', async () => {
       popUpMovieImage.innerHTML = `<img class="w-100" src="${movieObj.poster}" alt="movie-poster">`;
       popUpMovieTitle.innerHTML = movieObj.title;
       popUpMovieDescription.innerHTML = movieObj.description;
+      
       arrMovieComments.forEach((comment) => {
         const movieComments = `
           <div class="user-comment-detail p-3">
