@@ -1,5 +1,3 @@
-const calculateReservations = (arrMovieReservation) => {
-  return arrMovieReservation.length;
-};
+const calculateReservations = (arrMovieReservation) => arrMovieReservation.length;
 
 export { calculateReservations };
