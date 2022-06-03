@@ -68,24 +68,19 @@ window.addEventListener('DOMContentLoaded', async () => {
     if (eventId.includes('div')) {
       movieId = eventId.replace('div', '');
       popupOpen = true;
-    }
-    else if (eventId.includes('poster')) {
+    } else if (eventId.includes('poster')) {
       movieId = eventId.replace('poster', '');
       popupOpen = true;
-    }
-    else if (eventId.includes('title')) {
+    } else if (eventId.includes('title')) {
       movieId = eventId.replace('title', '');
       popupOpen = true;
-    }
-    else if (eventId.includes('releaseDate')) {
+    } else if (eventId.includes('releaseDate')) {
       movieId = eventId.replace('releaseDate', '');
       popupOpen = true;
-    }
-    else if (eventId.includes('poster')) {
+    } else if (eventId.includes('poster')) {
       movieId = eventId.replace('poster', '');
       popupOpen = true;
-    }
-    else if (eventId.includes('comment')) {
+    } else if (eventId.includes('comment')) {
       movieId = eventId.replace('comment', '');
       popupOpen = true;
     }
@@ -109,8 +104,7 @@ window.addEventListener('DOMContentLoaded', async () => {
       popUpMovieTitle.innerHTML = movieObj.title;
       popUpMovieDescription.innerHTML = movieObj.description;
       arrMovieComments.forEach((comment) => {
-        const movieComments =
-          `<div class="user-detail p-4">
+        const movieComments = `<div class="user-detail p-4">
             <h3 class="m-0 h5">User Name: ${comment.username}</h3>
             <p class="m-0">User review: ${comment.comment}</p>
             <p class="m-0">Creation date: ${comment.creation_date}
@@ -138,8 +132,7 @@ window.addEventListener('DOMContentLoaded', async () => {
       const movieReservationCount = calculateReservations(arrMovieReservation);
       movieDetailCounter.innerHTML = `${movieReservationCount} Reservations`;
       arrMovieReservation.forEach((reservation) => {
-        const movieReservation =
-          `<div class="user-detail p-3">
+        const movieReservation = `<div class="user-detail p-3">
             <h3 class="m-0 h5">User Name: ${reservation.username}</h3>
             <p class="m-0">Date start: ${reservation.date_start}</p>
             <p class="m-0">Date end: ${reservation.date_end}</p>
@@ -162,13 +155,13 @@ window.addEventListener('DOMContentLoaded', async () => {
     const commentObject = {
       item_id: movieId,
       username: userName.value,
-      comment: userComment.value
+      comment: userComment.value,
     };
     const reservationObject = {
       item_id: movieId,
       username: userName.value,
       date_start: reservationStartDateString.value,
-      date_end: reservationEndDateString.value
+      date_end: reservationEndDateString.value,
     };
     await moviesObject.addCommentToMovie(commentObject);
     await moviesObject.addReservationToMovie(reservationObject);
