@@ -1,15 +1,14 @@
 import Movie from './modules/data.js';
 import './style.css';
-import { calculateIteme } from './modules/counters/moviesCounter.js';
-import { addPopUpToMoviesDiv } from './modules/popUp.js';
-import { calculateComments } from './modules/counters/commentsCounter.js';
-import { calculateReservations } from './modules/counters/reservationsCounter.js';
+import {calculateIteme} from './modules/counters/moviesCounter.js';
+import {addPopUpToMoviesDiv} from './modules/popUp.js';
+import {calculateComments} from './modules/counters/commentsCounter.js';
+import {calculateReservations} from './modules/counters/reservationsCounter.js';
 
 const moviesObject = new Movie();
 
 const addDataToArrMovies = async () => {
-  const arrTopMovies = await moviesObject.getData();
-  return arrTopMovies;
+  return await moviesObject.getData();
 };
 
 const topRatedMoviesPart = document.getElementById('topRatedMovies');
