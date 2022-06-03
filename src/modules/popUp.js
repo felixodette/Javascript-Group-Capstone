@@ -51,4 +51,4 @@ const addPopUpToMoviesDiv = () => {
   </div>`;
 };
 
-export { addPopUpToMoviesDiv };
+export default { addPopUpToMoviesDiv };
