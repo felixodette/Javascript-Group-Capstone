@@ -18,7 +18,7 @@ const displayTopRatedMovies = async () => {
   topRatedMovies.forEach((movie) => {
     const movieInfo = `
       <a id="div${movie.id}" class="top-rated-movie darker-background d-flex flex-column align-items-center p-4 m-3 col-sm-8 col-md-3 col-lg-2" data-bs-toggle="modal" data-bs-target="#staticBackdrop" data-comments>
-        <img class="top-rated-movie-poster" id="poster${movie.id}" src="${movie.poster}"></img>
+        <img class="top-rated-movie-poster" id="poster${movie.id}" src="${movie.poster}"/>
         <h2 class="top-rated-movie-title light-color h5 text-center p-3 w-100" id="title${movie.id}">${movie.title}</h2>
         <p class="top-rated-movie-release-date light-color h6" id="releaseDate${movie.id}">${movie.releaseDate}</p>
         <div class="like-comment d-flex justify-content-between align-items-center">
@@ -66,7 +66,7 @@ window.addEventListener('DOMContentLoaded', async () => {
       moviesObject.addLikeToMovie(movieId).then(() => {
         likesPart.innerHTML = parseInt(likesPart.innerHTML, 10) + 1;
       });
-    };
+    }
 
     if (eventId.includes('div')) {
       movieId = eventId.replace('div', '');
@@ -120,7 +120,7 @@ window.addEventListener('DOMContentLoaded', async () => {
           </div>`;
         popUpUserInfo.insertAdjacentHTML('beforeend', movieComments);
       });
-    };
+    }
 
     if (eventId.includes('reservation')) {
       movieId = eventId.replace('reservation', '');
@@ -149,7 +149,7 @@ window.addEventListener('DOMContentLoaded', async () => {
           </div>`;
         popUpUserInfo.insertAdjacentHTML('beforeend', movieReservation);
       });
-    };
+    }
   });
 
   const popUpForm = document.getElementById('popUpForm');

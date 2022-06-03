@@ -1,6 +1,5 @@
 const calculateComments = (arrMovieComments) => {
-  const result = arrMovieComments.length;
-  return result;
+  return arrMovieComments.length;
 };
 
 // eslint-disable-next-line import/prefer-default-export
