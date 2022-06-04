@@ -43,7 +43,7 @@ const addPopUpToMoviesDiv = () => {
             <textarea class="form-control" id="reservationEndDate"></textarea>
           </div>
           <div class="modal-footer">
-            <button type="submit" class="btn btn-dark">Send comment</button>
+            <button type="submit" class="btn btn-dark">Make Reservation</button>
           </div>
         </form>
       </div>

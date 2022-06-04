@@ -41,6 +41,7 @@
     "webpack-dev-server": "^4.1.1"
   },
   "dependencies": {
+    "jest": "^28.1.0",
     "materialize-css": "^1.0.0-rc.2"
   }
 }
