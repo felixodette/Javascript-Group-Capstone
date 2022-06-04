@@ -7,6 +7,7 @@
 ## 🖥️ Live Demo
 
 [Javascript-Capstone](https://ahzamir.github.io/Leaderboard/)
+[Video-Short description](https://drive.google.com/file/d/1ObAJPZN0CCIW_KuLck3SizNxM63d0CHY/view?usp=sharing)
 
 
 ## Built With
@@ -29,7 +30,6 @@ You must have a browser on your device, a visual code, a git version installed, 
 
 ### Usage
 
-Getting Started
 Set up the project by cloning and changing into the repo directory:
 
 `https://github.com/felixodette/Javascript-Group-Capstone.git && cd Javascript-Group-Capstone`
