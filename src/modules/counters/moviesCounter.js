@@ -1,6 +1,3 @@
-const calculateIteme = (arrMovies) => {
-  const result = arrMovies.length;
-  return result;
-};
+const calculateIteme = (arrMovies) => arrMovies.length;
 
-export { calculateIteme };// eslint-disable-line import/prefer-default-export
+export { calculateIteme }; // eslint-disable-line import/prefer-default-export

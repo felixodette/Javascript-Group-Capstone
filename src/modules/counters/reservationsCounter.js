@@ -1,17 +1,3 @@
-// export default class Reservations {
-//   constructor(name, startDate, endDate) {
-//     this.name = name;
-//     this.startDate = startDate;
-//     this.endDate = endDate;
-//   }
+const calculateReservations = (arrMovieReservation) => arrMovieReservation.length;
 
-//    reservation = () => {
-//     reservations.push(
-//       {
-//         'name': this.name,
-//         'start': this.startDate,
-//         'end': this.endDate
-//       }
-//     )
-//   }
-// }
+export { calculateReservations }; // eslint-disable-line import/prefer-default-export

@@ -79,12 +79,13 @@ i:hover {
   color: rgb(121, 178, 228);
 }
 
-.footer {
-  background-color: #f1f1f1;
+footer {
+  background-color: #111827;
 }
 
 .footer-div {
-  background-color: rgba(0, 0, 0, 0.2);
+  width: 100%;
+  color: #eee;
 }
 
 .comments-div {
@@ -92,10 +93,13 @@ i:hover {
   border-radius: 5%;
 }
 
-.user-comment-detail {
+#userDetailDiv {
+  width: 100%;
+}
+
+.user-detail {
   background-color: #1f2937;
   border: #eee 3px solid;
   border-radius: 10%;
   color: #eee;
-  width: 100%;
 }
