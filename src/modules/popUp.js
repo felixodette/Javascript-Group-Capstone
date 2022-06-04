@@ -51,4 +51,4 @@ const addPopUpToMoviesDiv = () => {
   </div>`;
 };
 
-export { addPopUpToMoviesDiv };
+export { addPopUpToMoviesDiv }; // eslint-disable-line import/prefer-default-export
