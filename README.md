@@ -28,14 +28,14 @@ Deployment
 
 Authors
 👤 Zamir Ahmed Yusoufi
-* GitHub: @githubhandle
-* Twitter: @twitterhandle
-* LinkedIn: LinkedIn
+* GitHub: @ahzamir
+* Twitter: @YousufiZamir
+* [LinkedIn](https://www.linkedin.com/in/ah-zamir/)
 
   👤 Artur Gouveia
-* GitHub: @githubhandle
-* Twitter: @twitterhandle
-* LinkedIn: LinkedIn
+* GitHub: @Arturgouveia1970
+* Twitter: @Arturgouveia10
+* LinkedIn: artur-gouveia-323868197
 
   👤 Felix Odete
 * GitHub: @felixodette
