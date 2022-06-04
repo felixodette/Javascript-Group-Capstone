@@ -1,7 +1,4 @@
-const calculateComments = (arrMovieComments) => {
-  const result = arrMovieComments.length;
-  return result;
-};
+const calculateComments = (arrMovieComments) => arrMovieComments.length;
 
 // eslint-disable-next-line import/prefer-default-export
 export { calculateComments };
