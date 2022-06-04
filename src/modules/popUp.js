@@ -1,7 +1,7 @@
 const addPopUpToMoviesDiv = () => {
   const popUpPart = document.getElementById('popUp');
   popUpPart.innerHTML = `
-  <div class="modal fade modal-dialog-scrollable" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal fade modal-dialog-scrollable" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" data-static>
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
         <div class="modal-header">

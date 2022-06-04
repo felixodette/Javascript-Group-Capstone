@@ -58,11 +58,13 @@ window.addEventListener('DOMContentLoaded', async () => {
     const reservationStartDateDiv = document.getElementById('reservationStartDateDiv');
 
     if (eventId.includes('like')) {
+      const popUp = document.querySelector('[data-modal]');
+      const backDrop = document.querySelector('[data-static]');
+      backDrop.style.display = 'none';
+      popUp.style.display = 'none';
       movieId = eventId.replace('like', '');
       const likesPart = document.getElementById(`showLikes${movieId}`);
       moviesObject.addLikeToMovie(movieId).then(() => {
-        const popUp = document.getElementById('popUp');
-        popUp.style.display = 'none';
         likesPart.innerHTML = parseInt(likesPart.innerHTML, 10) + 1;
       });
     }
