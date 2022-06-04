@@ -1,0 +1,105 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Fira sans', sans-serif;
+}
+
+@font-face {
+  font-family: cocogoose;
+  src: url(/src/assets/fonts/Cocogoose\ Pro\ Letterpress\ Trial.ttf);
+}
+
+.dark-background {
+  background-color: #374151;
+}
+
+.dark-color {
+  color: #374151;
+}
+
+.light-background {
+  background-color: #eee;
+}
+
+.darker-background {
+  background-color: #1f2937;
+}
+
+.darker-color {
+  color: #1f2937;
+}
+
+.light-color {
+  color: #eee;
+}
+
+h1 {
+  font-family: 'cocogoose', sans-serif;
+}
+
+p {
+  font-family: sans-serif;
+}
+
+header p {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 900;
+}
+
+.top-rated-movie {
+  border: 1px solid #1f2937;
+  border-radius: 5%;
+}
+
+.top-rated-movie:hover {
+  background-color: #111827;
+  cursor: pointer;
+}
+
+.top-rated-movie-poster {
+  width: 90%;
+}
+
+.top-rated-movie-poster:hover {
+  border: darkred 3px solid;
+}
+
+.like-comment {
+  width: 50%;
+  bottom: 0;
+}
+
+i:hover {
+  color: cornflowerblue;
+  font-size: 1.4rem;
+}
+
+.show-likes-part:hover {
+  color: rgb(121, 178, 228);
+}
+
+footer {
+  background-color: #111827;
+}
+
+.footer-div {
+  width: 100%;
+  color: #eee;
+}
+
+.comments-div {
+  border: #111827 2px solid;
+  border-radius: 5%;
+}
+
+#userDetailDiv {
+  width: 100%;
+}
+
+.user-detail {
+  background-color: #1f2937;
+  border: #eee 3px solid;
+  border-radius: 10%;
+  color: #eee;
+}
