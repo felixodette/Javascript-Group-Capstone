@@ -1,4 +1,4 @@
-import { calculateReservations } from "../counters/reservationsCounter";
+import { calculateReservations } from '../counters/reservationsCounter.js';
 
 const arrMovie = [
   { user: 1, start_date: '...', end_date: '...' },
