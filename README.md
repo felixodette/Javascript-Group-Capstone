@@ -1,39 +1,46 @@
 # Javascript Group Capstone
-Description the project.
+Capstone project that displays movies and allows users to leave likes, comments, and reservations on their favorite titles.
 
 Built With
-* Major languages
+* HTML5, CSS3, JS ES6
 * Frameworks
-* Technologies used
+* [Involvement API](https://www.notion.so/Involvement-API-869e60b5ad104603aa6db59e08150270), [The MovieDB API](https://www.themoviedb.org/)
+* Webpack
+* Linters: Lighthouse, ESLint, Stylelint, Webhint
+* GitFlow
+* Jest
 
 Live Demo (if available)
 Live Demo Link
 
 Getting Started
-This is an example of how you may give instructions on setting up your project locally. Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.
-To get a local copy up and running follow these simple example steps.
+Set up the project by cloning and changing into the repo directory:
 
-Prerequisites
+`https://github.com/felixodette/Javascript-Group-Capstone.git && cd Javascript-Group-Capstone`
 
-Setup
+Install dependencies, build app, and run the app:
 
-Install
-
-Usage
+`npm install && npm run build && npm run start`
 
 Run tests
 
 Deployment
 
 Authors
-👤 Author1
+👤 Zamir Ahmed Yusoufi
 * GitHub: @githubhandle
 * Twitter: @twitterhandle
 * LinkedIn: LinkedIn
-  👤 Author2
+
+  👤 Artur Gouveia
 * GitHub: @githubhandle
 * Twitter: @twitterhandle
 * LinkedIn: LinkedIn
+
+  👤 Felix Odete
+* GitHub: @felixodette
+* Twitter: @Odette3000
+* [LinkedIn](https://www.linkedin.com/in/felixodete)
 
 🤝 Contributing
 Contributions, issues, and feature requests are welcome!
