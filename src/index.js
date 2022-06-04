@@ -14,17 +14,17 @@ const displayTopRatedMovies = async () => {
   const topRatedMovies = await addDataToArrMovies();
   topRatedMovies.forEach((movie) => {
     const movieInfo = `
-      <a id="div${movie.id}" class="top-rated-movie darker-background d-flex flex-column align-items-center p-4 m-3 col-sm-8 col-md-3 col-lg-2" data-bs-toggle="modal" data-bs-target="#staticBackdrop" data-comments>
-        <img class="top-rated-movie-poster" alt="Movie Poster" id="poster${movie.id}" src="${movie.poster}"/>
-        <h2 class="top-rated-movie-title light-color h5 text-center p-3 w-100" id="title${movie.id}">${movie.title}</h2>
-        <p class="top-rated-movie-release-date light-color h6" id="releaseDate${movie.id}">${movie.releaseDate}</p>
+      <div id="div${movie.id}" class="top-rated-movie darker-background d-flex flex-column align-items-center p-4 m-3 col-sm-8 col-md-3 col-lg-2">
+        <img data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="top-rated-movie-poster" alt="Movie Poster" id="poster${movie.id}" src="${movie.poster}"/>
+        <h2 data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="top-rated-movie-title light-color h5 text-center p-3 w-100" id="title${movie.id}">${movie.title}</h2>
+        <p data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="top-rated-movie-release-date light-color h6" id="releaseDate${movie.id}">${movie.releaseDate}</p>
         <div class="like-comment d-flex justify-content-between align-items-center">
           <p class="text-danger h6 show-likes-part p-1 m-0" id="showLikes${movie.id}">${movie.like}</p>
-          <i class="fa-regular fa-heart light-color" id="like${movie.id}"></i>
-          <i class="fa-regular fa-comment light-color" id="comment${movie.id}"></i>
-          <i class="fa-regular fa-calendar light-color" id="reservation${movie.id}"></i>
+          <a><i class="fa-regular fa-heart light-color" id="like${movie.id}"></i></a>
+          <a data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="fa-regular fa-comment light-color" id="comment${movie.id}"></i></a>
+          <a data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="fa-regular fa-calendar light-color" id="reservation${movie.id}"></i></a>
         </div>
-      </a>`;
+      </div>`;
     topRatedMoviesPart.insertAdjacentHTML('beforeend', movieInfo);
   });
 };
