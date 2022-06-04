@@ -4,7 +4,7 @@
   "description": "A web application that displays scores submitted by different players.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "dev": "webpack --mode development",
     "build": "webpack --mode production",
     "start": "webpack serve --open",
@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/felixodette/Leaderboard#readme",
   "devDependencies": {
+    "@babel/preset-env": "^7.18.2",
     "babel-eslint": "^10.1.0",
     "css-loader": "^6.2.0",
     "eslint": "^7.32.0",
