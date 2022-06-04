@@ -1,3 +1,5 @@
+/* eslint-disable-line import/prefer-default-export */
+
 import Movie from './modules/data.js';
 import './style.css';
 import { calculateIteme } from './modules/counters/moviesCounter.js';
