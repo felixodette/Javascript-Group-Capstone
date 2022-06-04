@@ -6,8 +6,9 @@
 
 ## 🖥️ Live Demo
 
-[Javascript-Capstone](https://ahzamir.github.io/Leaderboard/)
-[Video-Short description](https://drive.google.com/file/d/1ObAJPZN0CCIW_KuLck3SizNxM63d0CHY/view?usp=sharing)
+- [Javascript-Capstone](https://ahzamir.github.io/Leaderboard/)
+
+- [Video-Short description](https://drive.google.com/file/d/1ObAJPZN0CCIW_KuLck3SizNxM63d0CHY/view?usp=sharing)
 
 
 ## Built With
