@@ -4,7 +4,7 @@
   "description": "A web application that displays scores submitted by different players.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest --coverage",
     "dev": "webpack --mode development",
     "build": "webpack --mode production",
     "start": "webpack serve --open",
