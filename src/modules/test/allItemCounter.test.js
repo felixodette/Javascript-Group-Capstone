@@ -1,4 +1,4 @@
-import { calculateIteme } from "../counters/moviesCounter";
+import { calculateIteme } from '../counters/moviesCounter.js';
 
 const arrMovie = [{ movie: 1 }, { movie: 2 }, { movie: 3 }, { movie: 4 }, { movie: 5 }];
 
