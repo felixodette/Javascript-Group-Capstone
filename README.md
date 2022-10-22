@@ -6,7 +6,7 @@
 
 ## 🖥️ Live Demo
 
-- [Javascript-Capstone](https://felixodette.github.io/Javascript-Group-Capstone/)
+- [Javascript-Capstone](https://63472938939be20b59bda72c--stellular-cassata-c5fee6.netlify.app/)
 
 - [Video-Short description](https://drive.google.com/file/d/1ObAJPZN0CCIW_KuLck3SizNxM63d0CHY/view?usp=sharing)
 
